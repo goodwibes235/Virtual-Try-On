@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" fill="none">
+  <!-- Black Oversized T-Shirt - Front View Transparent Garment -->
+  <defs>
+    <linearGradient id="fabric" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Main body -->
+  <path d="M180 120 Q185 80 220 60 Q260 42 300 38 Q340 42 380 60 Q415 80 420 120 L460 140 Q480 148 490 170 L500 220 Q502 240 490 250 L440 230 L445 500 Q445 520 430 530 L170 530 Q155 520 155 500 L160 230 L110 250 Q98 240 100 220 L110 170 Q120 148 140 140 Z" 
+        fill="url(#fabric)" filter="url(#shadow)"/>
+  <!-- Left sleeve -->
+  <path d="M180 120 L140 140 Q120 148 110 170 L100 220 Q98 240 110 250 L160 230 L165 180 Z" 
+        fill="#151515" opacity="0.9"/>
+  <!-- Right sleeve -->
+  <path d="M420 120 L460 140 Q480 148 490 170 L500 220 Q502 240 490 250 L440 230 L435 180 Z" 
+        fill="#151515" opacity="0.9"/>
+  <!-- Neckline -->
+  <path d="M220 60 Q260 42 300 38 Q340 42 380 60 Q370 80 350 92 Q330 100 300 102 Q270 100 250 92 Q230 80 220 60 Z" 
+        fill="#0d0d0d"/>
+  <!-- Subtle fold lines -->
+  <line x1="270" y1="200" x2="275" y2="450" stroke="#1f1f1f" stroke-width="0.8" opacity="0.5"/>
+  <line x1="330" y1="200" x2="325" y2="450" stroke="#1f1f1f" stroke-width="0.8" opacity="0.5"/>
+  <!-- Bottom hem -->
+  <path d="M170 530 Q300 540 430 530" stroke="#0d0d0d" stroke-width="2" fill="none"/>
+</svg>

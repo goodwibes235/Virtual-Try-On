@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" fill="none">
+  <!-- Navy Polo Shirt - Front View Transparent Garment -->
+  <defs>
+    <linearGradient id="navyFabric" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1F3156"/>
+      <stop offset="100%" stop-color="#1B2A4A"/>
+    </linearGradient>
+    <filter id="navyShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Main body - slim fit -->
+  <path d="M200 125 Q202 90 232 68 Q264 50 300 46 Q336 50 368 68 Q398 90 400 125 L432 142 Q448 150 456 168 L464 208 Q466 224 456 234 L418 218 L420 470 Q420 488 408 498 L192 498 Q180 488 180 470 L182 218 L144 234 Q134 224 136 208 L144 168 Q152 150 168 142 Z" 
+        fill="url(#navyFabric)" filter="url(#navyShadow)"/>
+  <!-- Left sleeve -->
+  <path d="M200 125 L168 142 Q152 150 144 168 L136 208 Q134 224 144 234 L182 218 L185 172 Z" 
+        fill="#18254A" opacity="0.95"/>
+  <!-- Right sleeve -->
+  <path d="M400 125 L432 142 Q448 150 456 168 L464 208 Q466 224 456 234 L418 218 L415 172 Z" 
+        fill="#18254A" opacity="0.95"/>
+  <!-- Collar -->
+  <path d="M232 68 Q264 50 300 46 Q336 50 368 68 Q365 55 350 45 Q335 38 300 35 Q265 38 250 45 Q235 55 232 68 Z" 
+        fill="#243660"/>
+  <!-- Collar fold left -->
+  <path d="M248 68 L230 95 Q240 88 260 80 Z" fill="#243660"/>
+  <!-- Collar fold right -->
+  <path d="M352 68 L370 95 Q360 88 340 80 Z" fill="#243660"/>
+  <!-- Placket (button area) -->
+  <rect x="294" y="68" width="12" height="120" rx="2" fill="#16234A"/>
+  <!-- Buttons -->
+  <circle cx="300" cy="90" r="3" fill="#0F1A38" stroke="#243660" stroke-width="0.5"/>
+  <circle cx="300" cy="115" r="3" fill="#0F1A38" stroke="#243660" stroke-width="0.5"/>
+  <circle cx="300" cy="140" r="3" fill="#0F1A38" stroke="#243660" stroke-width="0.5"/>
+  <!-- Subtle fold lines -->
+  <line x1="268" y1="200" x2="270" y2="420" stroke="#1A2848" stroke-width="0.8" opacity="0.5"/>
+  <line x1="332" y1="200" x2="330" y2="420" stroke="#1A2848" stroke-width="0.8" opacity="0.5"/>
+  <!-- Bottom hem -->
+  <path d="M192 498 Q300 505 408 498" stroke="#152240" stroke-width="1.5" fill="none"/>
+  <!-- Sleeve cuffs -->
+  <path d="M144 234 L182 218" stroke="#152240" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M456 234 L418 218" stroke="#152240" stroke-width="2" fill="none" opacity="0.6"/>
+</svg>
+

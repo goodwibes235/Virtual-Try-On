@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+/* ─── NOIR Design System ─────────────────────────────────────────────────── */
+
+:root {
+  --noir-bg: #F5F3EF;
+  --noir-primary: #111111;
+  --noir-secondary: #858585;
+  --noir-accent: #C8FF45;
+  --noir-white: #FFFFFF;
+}
+
+
+
+/* ─── Base Styles ─────────────────────────────────────────────────────────── */
+
+html {
+  scroll-behavior: auto; /* Lenis handles smooth scrolling */
+}
+
+body {
+  background-color: var(--noir-bg);
+  color: var(--noir-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Typography ──────────────────────────────────────────────────────────── */
+
+.font-display {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.font-editorial {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+}
+
+/* ─── Selection ───────────────────────────────────────────────────────────── */
+
+::selection {
+  background-color: var(--noir-accent);
+  color: var(--noir-primary);
+}
+
+/* ─── Scrollbar ───────────────────────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--noir-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--noir-secondary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--noir-primary);
+}
+
+/* ─── GSAP Animation Utilities ────────────────────────────────────────────── */
+
+.reveal-mask {
+  overflow: hidden;
+}
+
+.reveal-text {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+/* ─── Button Styles ───────────────────────────────────────────────────────── */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background-color: var(--noir-primary);
+  color: var(--noir-white);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  background-color: var(--noir-accent);
+  color: var(--noir-primary);
+}
+
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background-color: var(--noir-accent);
+  color: var(--noir-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-accent:hover {
+  background-color: var(--noir-primary);
+  color: var(--noir-white);
+}
+
+/* ─── Custom Cursor (Desktop Only) ────────────────────────────────────────── */
+
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor {
+    cursor: none;
+  }
+}
+
+/* ─── Reduced Motion ──────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal-text {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* ─── Product Image Placeholder ───────────────────────────────────────────── */
+
+.product-image-placeholder {
+  background: linear-gradient(135deg, #E8E4DD 0%, #D5D0C8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── Lenis ───────────────────────────────────────────────────────────────── */
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}

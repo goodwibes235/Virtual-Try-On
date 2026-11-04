@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" fill="none">
+  <!-- White Regular-Fit T-Shirt - Front View Transparent Garment -->
+  <defs>
+    <linearGradient id="whiteFabric" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAFAF8"/>
+      <stop offset="100%" stop-color="#F0EDE8"/>
+    </linearGradient>
+    <filter id="whiteShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  <!-- Main body - slightly slimmer than oversized -->
+  <path d="M195 120 Q198 85 228 65 Q262 48 300 44 Q338 48 372 65 Q402 85 405 120 L440 138 Q458 146 468 165 L476 210 Q478 228 468 238 L425 220 L428 480 Q428 498 415 508 L185 508 Q172 498 172 480 L175 220 L132 238 Q122 228 124 210 L132 165 Q142 146 160 138 Z" 
+        fill="url(#whiteFabric)" filter="url(#whiteShadow)"/>
+  <!-- Left sleeve -->
+  <path d="M195 120 L160 138 Q142 146 132 165 L124 210 Q122 228 132 238 L175 220 L178 175 Z" 
+        fill="#F5F2ED" opacity="0.95"/>
+  <!-- Right sleeve -->
+  <path d="M405 120 L440 138 Q458 146 468 165 L476 210 Q478 228 468 238 L425 220 L422 175 Z" 
+        fill="#F5F2ED" opacity="0.95"/>
+  <!-- Neckline -->
+  <path d="M228 65 Q262 48 300 44 Q338 48 372 65 Q362 82 345 92 Q328 100 300 102 Q272 100 255 92 Q238 82 228 65 Z" 
+        fill="#E8E4DD"/>
+  <!-- Subtle fold lines -->
+  <line x1="275" y1="190" x2="278" y2="430" stroke="#E0DCD5" stroke-width="0.8" opacity="0.6"/>
+  <line x1="325" y1="190" x2="322" y2="430" stroke="#E0DCD5" stroke-width="0.8" opacity="0.6"/>
+  <!-- Bottom hem -->
+  <path d="M185 508 Q300 515 415 508" stroke="#DDD9D2" stroke-width="1.5" fill="none"/>
+  <!-- Sleeve hems -->
+  <path d="M132 238 L175 220" stroke="#DDD9D2" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M468 238 L425 220" stroke="#DDD9D2" stroke-width="1" fill="none" opacity="0.5"/>
+</svg>
+

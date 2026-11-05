@@ -12,7 +12,7 @@ export const products: Product[] = [
     category: 'Training Tees',
     fit: 'regular',
     colors: [
-      { name: 'Dark Graphic Print', hex: '#2A292F', image: '/garments/belgian-training-tee.png' },
+      { name: 'Dark Graphic Print', hex: '#2A292F', image: '/products/belgian-training-tee.jpg' },
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     garmentAsset: '/garments/belgian-training-tee.png',
@@ -29,7 +29,7 @@ export const products: Product[] = [
     category: 'T-Shirts',
     fit: 'oversized',
     colors: [
-      { name: 'Multicolor Graphic', hex: '#414856', image: '/garments/graphic-streetwear-tee.png' },
+      { name: 'Multicolor Graphic', hex: '#414856', image: '/products/graphic-streetwear-tee.jpg' },
     ],
     sizes: ['S', 'M', 'L', 'XL'],
     garmentAsset: '/garments/graphic-streetwear-tee.png',
@@ -46,7 +46,7 @@ export const products: Product[] = [
     category: 'T-Shirts',
     fit: 'regular',
     colors: [
-      { name: 'Cobalt & Midnight', hex: '#12487E', image: '/garments/blue-geometric-tee.png' },
+      { name: 'Cobalt & Midnight', hex: '#12487E', image: '/products/blue-geometric-tee.jpg' },
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
     garmentAsset: '/garments/blue-geometric-tee.png',
@@ -63,7 +63,7 @@ export const products: Product[] = [
     category: 'Polos',
     fit: 'slim',
     colors: [
-      { name: 'Deep Navy / Black', hex: '#122037', image: '/garments/golf-polo-3d.png' },
+      { name: 'Deep Navy / Black', hex: '#122037', image: '/products/golf-polo-3d.jpg' },
     ],
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     garmentAsset: '/garments/golf-polo-3d.png',

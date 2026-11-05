@@ -1,8 +1,8 @@
 export interface MeshVertex {
   x: number;
   y: number;
-  u: number; // Texture coordinate 0..1
-  v: number; // Texture coordinate 0..1
+  u: number;
+  v: number;
 }
 
 export interface TriangleIndices {
@@ -12,11 +12,8 @@ export interface TriangleIndices {
 }
 
 /**
- * Draws a single texture-mapped triangle using Canvas 2D affine transform.
- * Given source texture UVs and target screen coordinates, it computes the 2x3 matrix:
- *   [ x ]   [ a  c  e ] [ u ]
- *   [ y ] = [ b  d  f ] [ v ]
- *   [ 1 ]   [ 0  0  1 ] [ 1 ]
+ * Draws a texture-mapped triangle using Canvas 2D affine transform.
+ * Clips to triangle and applies 2D matrix transformation.
  */
 export function drawAffineTriangle(
   ctx: CanvasRenderingContext2D,
@@ -33,7 +30,7 @@ export function drawAffineTriangle(
   const u1 = p1.u * img.width, v1 = p1.v * img.height;
   const u2 = p2.u * img.width, v2 = p2.v * img.height;
 
-  // 1. Clip exactly to the target screen triangle (with 0.5px dilation to eliminate seams)
+  // 1. Clip path with slight dilation to prevent visible black seams between facets
   ctx.save();
   ctx.beginPath();
   ctx.moveTo(x0, y0);
@@ -42,7 +39,7 @@ export function drawAffineTriangle(
   ctx.closePath();
   ctx.clip();
 
-  // 2. Solve the 2D affine transformation matrix mapping (u, v) -> (x, y)
+  // 2. Solve 2D affine mapping (u, v) -> (x, y)
   const delta = u0 * (v1 - v2) - v0 * (u1 - u2) + (u1 * v2 - u2 * v1);
   if (Math.abs(delta) < 1e-6) {
     ctx.restore();
@@ -64,10 +61,8 @@ export function drawAffineTriangle(
   const e = deltaZ / delta;
   const f = deltaU / delta;
 
-  // 3. Apply transform and render source image
   ctx.transform(a, b, c, d, e, f);
   ctx.drawImage(img, 0, 0);
 
   ctx.restore();
 }
-
